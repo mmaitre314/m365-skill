@@ -1,0 +1,3 @@
+# Keep the folder checked in, but ignore everything inside it.
+*
+!.gitignore
