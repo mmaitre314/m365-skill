@@ -23,11 +23,11 @@ print(f"Sharing token: {sharing_token[:100]}...")
 print("Authenticating...")
 
 if platform == "win32":
-    import win32gui
-    window_handle = win32gui.GetForegroundWindow()
+    from win32gui import GetForegroundWindow
+    window_handle = GetForegroundWindow()
 else:
-    import msal
-    window_handle = msal.PublicClientApplication.CONSOLE_WINDOW_HANDLE
+    from msal import PublicClientApplication
+    window_handle = PublicClientApplication.CONSOLE_WINDOW_HANDLE
 
 credential = InteractiveBrowserBrokerCredential(
     client_id="d3590ed6-52b3-4102-aeff-aad2292ab01c",
